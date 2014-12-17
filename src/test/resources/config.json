@@ -1,0 +1,10 @@
+{
+  "pushMessaging": {
+      "pushManagers": [
+          "br.com.estudio89.push_messaging.TestPushManager"
+      ],
+      "gcmSenderId": "asdasd",
+      "serverRegistrationUrl": "http://api.estudio89.com.br/register"
+
+  }
+}
