@@ -33,7 +33,21 @@ Aninhados dentro do <application>
 </receiver>
 <service android:name="br.com.estudio89.push_messaging.PushCentral" />
 
-5. Dentro da activity de login, conferir se o usuário possui Google Play Services:
+5. Dentro do arquivo de configuração, criar atributo "pushMessaging" listando os PushManagers e demais configurações:
+{
+	...
+	"pushMessaging":{
+		"pushManagers":[
+			"br.com.estudio89.rhmais.push.SyncPushManager"
+		],
+		"gcmSenderId":"123456789012",
+		"serverRegistrationUrl":"http://api.estudio89.com.br/push_messaging/register-device/"
+	},
+	...
+}
+
+
+6. Dentro da activity de login, conferir se o usuário possui Google Play Services:
 
 	@Override
 	protected void onResume() {
@@ -43,7 +57,7 @@ Aninhados dentro do <application>
 		super.onResume();
 	}
 
-6. Dentro da classe da aplicação, no método onCreate, inicializar o plugin e registrar o device caso necessário.
+7. Dentro da classe da aplicação, no método onCreate, inicializar o plugin e registrar o device caso necessário.
 
 	PushInjection.init(this, "config.json");
 	PushConfig.getInstance().performRegistrationIfNeeded();
