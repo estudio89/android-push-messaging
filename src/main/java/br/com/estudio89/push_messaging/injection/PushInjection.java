@@ -3,13 +3,12 @@ package br.com.estudio89.push_messaging.injection;
 import android.app.Application;
 import android.content.Context;
 import br.com.estudio89.push_messaging.PushConfig;
-import dagger.ObjectGraph;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PushInjection {
-	private static ObjectGraph graph;
+    private static List<Object> graph = new ArrayList<Object>();
 
 	/**
 	 * Realiza a injeção de dependência nas classes
@@ -19,35 +18,24 @@ public class PushInjection {
 	 */
 	public static void init(Application application, String configFile) {
 
-		graph = ObjectGraph.create(getModules(application).toArray());
-
-
 		// Kickstarting injection
-		Context context = graph.get(Context.class);
-		PushConfig pushConfig = graph.get(PushConfig.class);
+        executeInjection(application);
+
+		PushConfig pushConfig = get(PushConfig.class);
 		pushConfig.setConfigFile(configFile);
 
 	}
 
-	/**
-	 * Injeta dependências.
-	 * 
-	 * @param object
-	 */
-	public static void inject(Object object) {
-		graph.inject(object);
-	}
-	
-	/**
-	 * Retorna os módulos responsáveis pelas injeções de
-	 * dependência no projeto.
-	 * 
-	 * @param application
-	 * @return
-	 */
-	private static List<Object> getModules(Application application) {
-		return Arrays.<Object>asList(new AppContextModule(application));
-	}
+    private static void executeInjection(Application application) {
+        Context context = application;
+
+        PushConfig pushConfig = new PushConfig(context);
+
+        graph.add(context);
+        graph.add(pushConfig);
+
+    }
+
 	
 	/**
 	 * Retorna uma classe com suas dependências satisfeitas.
@@ -56,6 +44,11 @@ public class PushInjection {
 	 * @return
 	 */
 	public static <E> E get(Class<E> k) {
-		return graph.get(k);
+        for (Object obj:graph) {
+            if (k.isAssignableFrom(obj.getClass())) {
+                return (E) obj;
+            }
+        }
+        return null;
 	}
 }

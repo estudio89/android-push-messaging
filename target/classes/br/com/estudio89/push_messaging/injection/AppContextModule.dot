@@ -1,6 +1,0 @@
-digraph G1 {
-  concentrate = true;
-  n2 [label="br.com.estudio89.push_messaging.PushConfig"];
-  n3 [label="android.content.Context"];
-  n2 -> n3;
-}

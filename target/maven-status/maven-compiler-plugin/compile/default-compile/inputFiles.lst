@@ -1,7 +1,5 @@
 /Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/PushManager.java
 /Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/extras/GcmBroadcastReceiver.java
 /Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/PushConfig.java
-/Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/injection/AppContextModule.java
-/Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/injection/PushConfigModule.java
 /Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/PushCentral.java
 /Users/luccascorrea/Desenvolvimento/android_tools/android_push_messaging/src/main/java/br/com/estudio89/push_messaging/injection/PushInjection.java
