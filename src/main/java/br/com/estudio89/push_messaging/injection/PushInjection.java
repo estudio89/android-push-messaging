@@ -3,6 +3,7 @@ package br.com.estudio89.push_messaging.injection;
 import android.app.Application;
 import android.content.Context;
 import br.com.estudio89.push_messaging.PushConfig;
+import br.com.estudio89.push_messaging.WebsocketHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +31,11 @@ public class PushInjection {
         Context context = application;
 
         PushConfig pushConfig = new PushConfig(context);
+        WebsocketHelper websocketHelper = new WebsocketHelper(pushConfig);
 
         graph.add(context);
         graph.add(pushConfig);
+        graph.add(websocketHelper);
 
     }
 

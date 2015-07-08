@@ -25,5 +25,8 @@
         <module name="push_messaging" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="push_messaging" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

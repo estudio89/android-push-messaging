@@ -67,6 +67,11 @@
       <scope>provided</scope>
     </dependency>
 
+    <dependency>
+      <groupId>com.github.nkzawa</groupId>
+      <artifactId>socket.io-client</artifactId>
+      <version>0.5.2</version>
+    </dependency>
 
   </dependencies>
 
@@ -99,6 +104,37 @@
 
       </plugins>
     </pluginManagement>
+
+    <plugins>
+      <!--  START SNIPPET: source  -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!--  END SNIPPET: source  -->
+      <!--  START SNIPPET: javadoc  -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!--  END SNIPPET: javadoc  -->
+    </plugins>
 
   </build>
 </project>

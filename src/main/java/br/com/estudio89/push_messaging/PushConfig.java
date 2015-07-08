@@ -18,6 +18,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 
 /**
@@ -33,6 +34,7 @@ public class PushConfig {
     private static String configFile;
     private static String serverRegistrationUrl;
     private static LinkedHashMap<String, PushManager> pushManagersByIdentifier = new LinkedHashMap<String, PushManager>();
+    private static String websocketUrl;
 
 
     public static PushConfig getInstance() {
@@ -48,6 +50,9 @@ public class PushConfig {
         this.loadSettings();
     }
 
+    public Collection<PushManager> getPushManagers() {
+        return pushManagersByIdentifier.values();
+    }
     public PushManager getPushManager(String identifier) {
         return pushManagersByIdentifier.get(identifier);
     }
@@ -72,6 +77,10 @@ public class PushConfig {
         return registrationId;
     }
 
+    public String getWebsocketUrl() {
+        return websocketUrl;
+    }
+
     public void erasePushPreferences() {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 PUSH_PREFERENCES_FILE, Context.MODE_PRIVATE);
@@ -89,6 +98,7 @@ public class PushConfig {
             new RegisterDevice().execute();
         }
     }
+
 
     public boolean checkPlayServices(Activity activity) {
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(activity);
@@ -121,6 +131,7 @@ public class PushConfig {
             gcmSenderId = jsonConfig.getString("gcmSenderId");
             serverRegistrationUrl = jsonConfig.getString("serverRegistrationUrl");
             JSONArray pushManagersJson = jsonConfig.getJSONArray("pushManagers");
+            websocketUrl = jsonConfig.optString("websocketUrl");
 
 
             PushManager pushManager;
@@ -156,9 +167,7 @@ public class PushConfig {
             try {
                 runningRegistration = true;
                 GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(context);
-                Log.d(TAG, "REGISTRANDO GCM");
                 String registrationId = gcm.register(gcmSenderId);
-                Log.d(TAG, "ENVIANDO AO BACKEND");
                 sendRegistrationIdToBackend(registrationId);
             } catch (IOException e) {
 
@@ -175,15 +184,18 @@ public class PushConfig {
 
                 JSONObject parameters = new JSONObject();
                 parameters.put("token", token);
-                parameters.put("registration_id",registrationId);
-                parameters.put("platform","android");
+                parameters.put("old_registration_id", getRegistrationId());
+                parameters.put("registration_id", registrationId);
+                parameters.put("platform", "android");
 
                 ServerComm serverComm = ServerComm.getInstance();
                 serverComm.post(serverRegistrationUrl, parameters);
-                Log.d(TAG, "ENVIOU AO BACKEND");
                 setRegistrationId(registrationId);
                 syncConfig.setDeviceId(registrationId);
-                Log.d(TAG, "Setou device id = " + registrationId);
+
+                // Starting websocket connection
+                WebsocketHelper websocketHelper = WebsocketHelper.getInstance();
+                websocketHelper.startSocket();
 
             } catch (JSONException e) {
                 throw new RuntimeException(e);

@@ -16,6 +16,15 @@ public class PushCentral extends IntentService {
         super("PushCentral");
     }
 
+    public static void processPushMessage(Bundle pushData) {
+        String type = pushData.getString("type");
+        PushConfig pushConfig = PushConfig.getInstance();
+
+        PushManager manager = pushConfig.getPushManager(type);
+        if (manager != null) {
+            manager.processPushMessage(pushData);
+        }
+    }
     @Override
     protected void onHandleIntent(Intent intent) {
         Bundle extras = intent.getExtras();
@@ -40,13 +49,7 @@ public class PushCentral extends IntentService {
                 // If it's a regular GCM message, do some work.
             } else if (GoogleCloudMessaging.
                     MESSAGE_TYPE_MESSAGE.equals(messageType)) {
-                String type = extras.getString("type");
-                PushConfig pushConfig = PushConfig.getInstance();
-
-                PushManager manager = pushConfig.getPushManager(type);
-                if (manager != null) {
-                    manager.processPushMessage(extras);
-                }
+               processPushMessage(extras);
             }
         }
         // Release the wake lock provided by the WakefulBroadcastReceiver.
