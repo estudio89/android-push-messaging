@@ -20,6 +20,15 @@ public class PushCentral extends IntentService {
         String type = pushData.getString("type");
         PushConfig pushConfig = PushConfig.getInstance();
 
+        long timestamp = Long.parseLong(pushData.getString("timestamp"));
+        long storedTimestamp = pushConfig.getTimestamp();
+
+        if (timestamp <= storedTimestamp) {
+            // This push message was received already
+            return;
+        } else {
+            pushConfig.setTimestamp(timestamp);
+        }
         PushManager manager = pushConfig.getPushManager(type);
         if (manager != null) {
             manager.processPushMessage(pushData);

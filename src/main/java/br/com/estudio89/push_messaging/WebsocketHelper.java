@@ -30,47 +30,49 @@ public class WebsocketHelper {
     public void startSocket() {
         String websocketUrl = pushConfig.getWebsocketUrl();
         final String registrationId = pushConfig.getRegistrationId();
-        if ("".equals(websocketUrl) || registrationId == null || socket != null) {
+        if ("".equals(websocketUrl) || registrationId == null || connected) {
             return;
         }
 
         try {
-            IO.Options opts = new IO.Options();
-            opts.reconnection = true;
-            socket = IO.socket(websocketUrl, opts);
+            if (socket == null) {
+                IO.Options opts = new IO.Options();
+                opts.reconnection = true;
+                socket = IO.socket(websocketUrl, opts);
 
-            // Connection
-            socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
-                public void call(Object... objects) {
-                    connected = true;
-
-                    JSONObject jsonObject = new JSONObject();
-                    try {
-                        jsonObject.put("identifier", "android");
-                        jsonObject.put("deviceId", registrationId);
-                    } catch (JSONException e) {
-                        throw new RuntimeException(e);
-                    }
-                    socket.emit("register", jsonObject);
-                }
-            });
-
-            // Disconnection
-            socket.on(Socket.EVENT_DISCONNECT, new Emitter.Listener() {
-                public void call(Object... objects) {
-                    connected = false;
-                }
-            });
-
-            // Subscribing to push manager events
-            for (final PushManager pushManager:pushConfig.getPushManagers()) {
-                socket.on(pushManager.getIdentifier(), new Emitter.Listener() {
+                // Connection
+                socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
                     public void call(Object... objects) {
-                        JSONObject pushData = (JSONObject) objects[0];
-                        Bundle bundle = jsonObjectToBundle(pushData);
-                        pushManager.processPushMessage(bundle);
+                        connected = true;
+
+                        JSONObject jsonObject = new JSONObject();
+                        try {
+                            jsonObject.put("identifier", "android");
+                            jsonObject.put("deviceId", registrationId);
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                        socket.emit("register", jsonObject);
                     }
                 });
+
+                // Disconnection
+                socket.on(Socket.EVENT_DISCONNECT, new Emitter.Listener() {
+                    public void call(Object... objects) {
+                        connected = false;
+                    }
+                });
+
+                // Subscribing to push manager events
+                for (final String identifier:pushConfig.getPushManagerIdentifiers()) {
+                    socket.on(identifier, new Emitter.Listener() {
+                        public void call(Object... objects) {
+                            JSONObject pushData = (JSONObject) objects[0];
+                            Bundle bundle = jsonObjectToBundle(pushData);
+                            PushCentral.processPushMessage(bundle);
+                        }
+                    });
+                }
             }
 
             socket.connect();
@@ -79,6 +81,11 @@ public class WebsocketHelper {
         }
     }
 
+    public void disconnect() {
+        if (socket != null) {
+            socket.disconnect();
+        }
+    }
     public boolean isConnected() {
         return connected;
     }

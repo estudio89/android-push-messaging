@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 /**
  * Created by luccascorrea on 12/6/14.
@@ -28,6 +29,7 @@ public class PushConfig {
     private static String TAG = "Push";
     private static String PUSH_PREFERENCES_FILE = "br.com.estudio89.push_messaging.preferences";
     private static String KEY_REGISTRATION_ID = "REGISTRATION_ID";
+    private static String KEY_TIMESTAMP = "TIMESTAMP";
 
     Context context;
     private static String gcmSenderId;
@@ -50,6 +52,9 @@ public class PushConfig {
         this.loadSettings();
     }
 
+    public Set<String> getPushManagerIdentifiers() {
+        return pushManagersByIdentifier.keySet();
+    }
     public Collection<PushManager> getPushManagers() {
         return pushManagersByIdentifier.values();
     }
@@ -77,6 +82,26 @@ public class PushConfig {
         return registrationId;
     }
 
+    public void setTimestamp(long timestamp) {
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                PUSH_PREFERENCES_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putLong(KEY_TIMESTAMP, timestamp);
+        editor.commit();
+    }
+
+    /**
+     * Retorna o registration id ou null caso não tenha sido obtido.
+     * @return
+     */
+    public long getTimestamp() {
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                PUSH_PREFERENCES_FILE, Context.MODE_PRIVATE);
+        long timestamp = sharedPref.getLong(KEY_TIMESTAMP,
+                0);
+        return timestamp;
+    }
+
     public String getWebsocketUrl() {
         return websocketUrl;
     }
@@ -87,6 +112,7 @@ public class PushConfig {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.clear();
         editor.commit();
+        WebsocketHelper.getInstance().disconnect();
     }
 
     public void performRegistrationIfNeeded() {
