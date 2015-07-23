@@ -18,6 +18,7 @@ public class WebsocketHelper {
     private PushConfig pushConfig;
     private Socket socket;
     private boolean connected;
+    private String currentRoom;
 
     public WebsocketHelper(PushConfig pushConfig) {
         this.pushConfig = pushConfig;
@@ -86,10 +87,102 @@ public class WebsocketHelper {
             socket.disconnect();
         }
     }
+
     public boolean isConnected() {
         return connected;
     }
 
+    /**
+     * Asks the server to add this user to a room.
+     *
+     * @param roomName
+     */
+    public void join(String roomName) {
+        if (roomName == null || socket == null || !socket.connected()) {
+            return;
+        }
+        currentRoom = roomName;
+        socket.emit("joinRoom", roomName);
+    }
+
+    /**
+     * Asks the server to leave a room.
+     */
+    public void leave(String roomName) {
+        if (roomName == null || socket == null || !socket.connected()) {
+            return;
+        }
+
+        if (currentRoom == null) {
+            return;
+        }
+
+        socket.emit("leaveRoom", new Object[]{});
+        currentRoom = null;
+    }
+
+    /**
+     * Sends a message to the given room.
+     *
+     * @param roomName
+     * @param data
+     */
+    public void sendToRoom(String roomName, String eventName, JSONObject data) {
+        if (roomName == null || socket == null || !socket.connected()) {
+            return;
+        }
+
+        if (!roomName.equals(currentRoom)) {
+            if (currentRoom != null) {
+                leave(currentRoom);
+            }
+            join(roomName);
+        }
+        JSONObject jsonObj = new JSONObject();
+        try {
+            jsonObj.put("eventName", eventName);
+            jsonObj.put("eventData", data);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        socket.emit("sendToRoom", jsonObj);
+    }
+
+    /**
+     * Makes the socket listen to an event.
+     *
+     * @param eventName
+     * @param listener
+     */
+    public void on(String eventName, Emitter.Listener listener) {
+        if (socket == null || !socket.connected()) {
+            return;
+        }
+
+        socket.on(eventName, listener);
+    }
+
+    /**
+     * Makes the socket stop listening to an event.
+     *
+     * @param eventName
+     */
+    public void off(String eventName) {
+        if (socket == null || !socket.connected()) {
+            return;
+        }
+
+        socket.off(eventName);
+    }
+
+    /**
+     * Converts a json object into a bundle. Used to process
+     * push messages.
+     *
+     * @param pushData
+     * @return
+     */
     private Bundle jsonObjectToBundle(JSONObject pushData) {
         Bundle bundle = new Bundle();
         Iterator<?> keys = pushData.keys();
