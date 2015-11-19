@@ -3,6 +3,7 @@ package br.com.estudio89.push_messaging;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
@@ -213,6 +214,9 @@ public class PushConfig {
                 parameters.put("old_registration_id", getRegistrationId());
                 parameters.put("registration_id", registrationId);
                 parameters.put("platform", "android");
+                try {
+                    parameters.put("app_version", context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName);
+                } catch (PackageManager.NameNotFoundException e) {}
 
                 ServerComm serverComm = ServerComm.getInstance();
                 serverComm.post(serverRegistrationUrl, parameters);

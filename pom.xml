@@ -4,7 +4,7 @@
 
   <groupId>br.com.estudio89</groupId>
   <artifactId>push_messaging</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
 
   <name>push_messaging</name>
@@ -63,14 +63,14 @@
     <dependency>
       <groupId>br.com.estudio89</groupId>
       <artifactId>syncing</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.9</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.github.nkzawa</groupId>
+      <groupId>io.socket</groupId>
       <artifactId>socket.io-client</artifactId>
-      <version>0.5.2</version>
+      <version>0.6.1</version>
     </dependency>
 
   </dependencies>
