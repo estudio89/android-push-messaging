@@ -209,6 +209,10 @@ public class PushConfig {
                 SyncConfig syncConfig = SyncConfig.getInstance();
                 String token = syncConfig.getAuthToken();
 
+                if (token == null) {
+                    return;
+                }
+
                 JSONObject parameters = new JSONObject();
                 parameters.put("token", token);
                 parameters.put("old_registration_id", getRegistrationId());
