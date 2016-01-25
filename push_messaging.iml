@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <exclude-output />
@@ -35,6 +35,7 @@
     <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.4.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: br.com.estudio89:sentry:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: joda-time:joda-time:2.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: br.com.estudio89:grabber:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: br.com.estudio89:grabber-annotations:1.0" level="project" />
     <orderEntry type="library" name="Maven: io.socket:socket.io-client:0.6.1" level="project" />
     <orderEntry type="library" name="Maven: io.socket:engine.io-client:0.6.1" level="project" />

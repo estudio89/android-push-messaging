@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import br.com.estudio89.grabber.Grabber;
 import br.com.estudio89.grabber.annotation.GrabberFactory;
 import br.com.estudio89.grabber.annotation.InstantiationListener;
 import br.com.estudio89.push_messaging.injection.PushInjection;
@@ -163,7 +164,7 @@ public class PushConfig {
 
             GrabberFactory<PushManager> syncManagerGrabberFactory;
             try {
-                syncManagerGrabberFactory = (GrabberFactory<PushManager>) Class.forName("br.com.estudio89.push_messaging.PushManagerFactory").newInstance();
+                syncManagerGrabberFactory = Grabber.getFactory(PushManager.class);
                 syncManagerGrabberFactory.listAll(new InstantiationListener<PushManager>() {
                     @Override
                     public void onNewInstance(PushManager pushManager) {
@@ -172,10 +173,6 @@ public class PushConfig {
                     }
                 });
             } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
-            } catch (InstantiationException e) {
                 throw new RuntimeException(e);
             }
 
