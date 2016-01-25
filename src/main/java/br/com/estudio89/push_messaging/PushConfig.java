@@ -7,13 +7,14 @@ import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
+import br.com.estudio89.grabber.annotation.GrabberFactory;
+import br.com.estudio89.grabber.annotation.InstantiationListener;
 import br.com.estudio89.push_messaging.injection.PushInjection;
 import br.com.estudio89.syncing.ServerComm;
 import br.com.estudio89.syncing.SyncConfig;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -157,31 +158,30 @@ public class PushConfig {
 
             gcmSenderId = jsonConfig.getString("gcmSenderId");
             serverRegistrationUrl = jsonConfig.getString("serverRegistrationUrl");
-            JSONArray pushManagersJson = jsonConfig.getJSONArray("pushManagers");
             websocketUrl = jsonConfig.optString("websocketUrl");
 
 
-            PushManager pushManager;
-            String className;
-            Class klass;
-            String identifier;
-            for (int i = 0; i < pushManagersJson.length(); i++) {
-                className = pushManagersJson.getString(i);
-                klass = Class.forName(className);
-                pushManager = (PushManager) klass.newInstance();
-                identifier = pushManager.getIdentifier();
-                pushManagersByIdentifier.put(identifier,pushManager);
+            GrabberFactory<PushManager> syncManagerGrabberFactory;
+            try {
+                syncManagerGrabberFactory = (GrabberFactory<PushManager>) Class.forName("br.com.estudio89.push_messaging.PushManagerFactory").newInstance();
+                syncManagerGrabberFactory.listAll(new InstantiationListener<PushManager>() {
+                    @Override
+                    public void onNewInstance(PushManager pushManager) {
+                        String identifier = pushManager.getIdentifier();
+                        pushManagersByIdentifier.put(identifier,pushManager);
+                    }
+                });
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            } catch (InstantiationException e) {
+                throw new RuntimeException(e);
             }
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (JSONException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
     }
