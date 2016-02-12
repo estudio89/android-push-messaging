@@ -2,10 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24960e1d-005f-4e5e-be94-52bba92d0af2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushConfig.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushConfig.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__android_support_compatibility_v4_21_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_android_support_support_annotations_22_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_android_support_support_v4_13_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_gms_google_play_services_21_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0-SNAPSHOT-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.1-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.1-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.2-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.2-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.3-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.3-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.3.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushCentral.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushCentral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig$1.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig$RegisterDevice.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig$RegisterDevice.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushManager.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/PushManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$1.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$2.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$3.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/WebsocketHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/extras/GcmBroadcastReceiver.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/extras/GcmBroadcastReceiver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/injection/PushInjection.class" afterPath="$PROJECT_DIR$/target/classes/br/com/estudio89/push_messaging/injection/PushInjection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4-javadoc.jar" afterPath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4-javadoc.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4-sources.jar" afterPath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4-sources.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4.jar" afterPath="$PROJECT_DIR$/target/e89-push_messaging-1.0.4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/push_messaging.iml" afterPath="$PROJECT_DIR$/push_messaging.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushCentral.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushCentral.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushConfig.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushManager.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/PushManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/WebsocketHelper.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/WebsocketHelper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushCentral.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushCentral.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushConfig.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushManager.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/PushManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/WebsocketHelper.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/class-use/WebsocketHelper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/GcmBroadcastReceiver.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/GcmBroadcastReceiver.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/class-use/GcmBroadcastReceiver.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/class-use/GcmBroadcastReceiver.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/extras/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/PushInjection.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/PushInjection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/class-use/PushInjection.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/class-use/PushInjection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/injection/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-use.html" afterPath="$PROJECT_DIR$/target/apidocs/br/com/estudio89/push_messaging/package-use.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" afterPath="$PROJECT_DIR$/target/apidocs/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" afterPath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" afterPath="$PROJECT_DIR$/target/apidocs/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" afterPath="$PROJECT_DIR$/target/apidocs/index-all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/index.html" afterPath="$PROJECT_DIR$/target/apidocs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" afterPath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="push_messaging.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +99,7 @@
     <favorites_list name="push_messaging" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="PushCentral.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushCentral.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.25930852">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -83,11 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PushConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PushConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05366922">
-              <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
               <folding>
                 <element signature="e#1540#1561#0" expanded="false" />
               </folding>
@@ -140,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/injection/PushInjection.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushCentral.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/WebsocketHelper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -167,13 +237,10 @@
       </PATH>
     </treeState>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -182,7 +249,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -357,6 +424,15 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -378,6 +454,15 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -497,59 +582,59 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21671991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21671991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32711443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21671991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21671991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32799146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1059,21 +1144,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/estudio89/push_messaging/PushConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05366922">
-          <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="168" column="24" selection-start-line="168" selection-start-column="24" selection-end-line="168" selection-end-column="24" />
           <folding>
             <element signature="e#1540#1561#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25930852">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
