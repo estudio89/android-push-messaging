@@ -16,9 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <android.version>4.1.1.4</android.version>
     <android.platform>16</android.platform>
-    <android.plugin.version>3.8.2</android.plugin.version>
+    <android.plugin.version>4.4.1</android.plugin.version>
     <android.support.version>21.0.2</android.support.version>
-    <android.services.version>21.0.0</android.services.version>
+    <android.services.version>8.3.0</android.services.version>
     <dagger.version>1.2.2</dagger.version>
   </properties>
 
@@ -34,22 +34,14 @@
     <dependency>
       <groupId>com.google.android.gms</groupId>
       <artifactId>play-services</artifactId>
-      <version>4.0.30</version>
-      <type>aar</type>
+      <version>8.3.0</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>android.support</groupId>
-      <artifactId>compatibility-v4</artifactId>
+      <groupId>com.android.support</groupId>
+      <artifactId>support-v4</artifactId>
       <version>${android.support.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.google.android.gms</groupId>
-      <artifactId>google-play-services</artifactId>
-      <version>${android.services.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -87,14 +79,10 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+          <groupId>com.simpligility.maven.plugins</groupId>
           <artifactId>android-maven-plugin</artifactId>
           <version>${android.plugin.version}</version>
-          <configuration>
-            <sdk>
-              <platform>${android.platform}</platform>
-            </sdk>
-          </configuration>
+          <extensions>true</extensions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -139,6 +127,14 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
       </plugin>
       <!--  END SNIPPET: javadoc  -->
     </plugins>
