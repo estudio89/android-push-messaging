@@ -33,10 +33,12 @@ public class PushConfig {
     private static String PUSH_PREFERENCES_FILE = "br.com.estudio89.push_messaging.preferences";
     private static String KEY_REGISTRATION_ID = "REGISTRATION_ID";
     private static String KEY_TIMESTAMP = "TIMESTAMP";
+    private static String REGISTRATION_URL_SUFFIX = "push_messaging/register-device/";
 
     Context context;
     private static String gcmSenderId;
     private static String configFile;
+    private String baseURL;
     private static String serverRegistrationUrl;
     private static LinkedHashMap<String, PushManager> pushManagersByIdentifier = new LinkedHashMap<String, PushManager>();
     private static String websocketUrl;
@@ -50,8 +52,12 @@ public class PushConfig {
         this.context = context;
     }
 
-    public void setConfigFile(String configFile) {
+    public void setConfigFile(String configFile, String baseURL) {
         this.configFile = configFile;
+        this.baseURL = baseURL;
+        if (!baseURL.endsWith("/")) {
+            this.baseURL = this.baseURL + "/";
+        }
         this.loadSettings();
     }
 
@@ -158,9 +164,8 @@ public class PushConfig {
             JSONObject jsonConfig = new JSONObject(jsonString).getJSONObject("pushMessaging");
 
             gcmSenderId = jsonConfig.getString("gcmSenderId");
-            serverRegistrationUrl = jsonConfig.getString("serverRegistrationUrl");
-            websocketUrl = jsonConfig.optString("websocketUrl");
-
+            serverRegistrationUrl = this.baseURL + REGISTRATION_URL_SUFFIX;
+            websocketUrl = jsonConfig.optString("websocketUrl", this.baseURL);
 
             GrabberFactory<PushManager> syncManagerGrabberFactory;
             try {
