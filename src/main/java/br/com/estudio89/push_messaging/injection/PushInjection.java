@@ -17,13 +17,13 @@ public class PushInjection {
 	 * 
 	 * @param application
 	 */
-	public static void init(Application application, String configFile) {
+	public static void init(Application application, String configFile, String baseURL) {
 
 		// Kickstarting injection
         executeInjection(application);
 
 		PushConfig pushConfig = get(PushConfig.class);
-		pushConfig.setConfigFile(configFile);
+		pushConfig.setConfigFile(configFile, baseURL);
 
 	}
 
