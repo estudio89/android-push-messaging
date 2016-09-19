@@ -42,6 +42,7 @@ public class PushConfig {
     private static String serverRegistrationUrl;
     private static LinkedHashMap<String, PushManager> pushManagersByIdentifier = new LinkedHashMap<String, PushManager>();
     private static String websocketUrl;
+    private boolean disableWebsocket;
 
 
     public static PushConfig getInstance() {
@@ -166,6 +167,7 @@ public class PushConfig {
             gcmSenderId = jsonConfig.getString("gcmSenderId");
             serverRegistrationUrl = this.baseURL + REGISTRATION_URL_SUFFIX;
             websocketUrl = jsonConfig.optString("websocketUrl", this.baseURL);
+            disableWebsocket = jsonConfig.optBoolean("disableWebsocket", false);
 
             GrabberFactory<PushManager> syncManagerGrabberFactory;
             try {
@@ -230,8 +232,10 @@ public class PushConfig {
                 syncConfig.setDeviceId(registrationId);
 
                 // Starting websocket connection
-                WebsocketHelper websocketHelper = WebsocketHelper.getInstance();
-                websocketHelper.startSocket();
+                if (!disableWebsocket) {
+                    WebsocketHelper websocketHelper = WebsocketHelper.getInstance();
+                    websocketHelper.startSocket();
+                }
 
             } catch (JSONException e) {
                 throw new RuntimeException(e);
