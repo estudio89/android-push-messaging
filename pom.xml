@@ -4,7 +4,7 @@
 
   <groupId>br.com.estudio89</groupId>
   <artifactId>push_messaging</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
 
   <name>push_messaging</name>

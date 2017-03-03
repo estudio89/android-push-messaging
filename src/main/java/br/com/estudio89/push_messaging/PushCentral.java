@@ -9,6 +9,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 /**
  * Created by luccascorrea on 12/6/14.
+ *
  */
 public class PushCentral extends IntentService {
 
@@ -20,15 +21,18 @@ public class PushCentral extends IntentService {
         String type = pushData.getString("type");
         PushConfig pushConfig = PushConfig.getInstance();
 
-        long timestamp = Long.parseLong(pushData.getString("timestamp"));
-        long storedTimestamp = pushConfig.getTimestamp();
+        try {
+            long timestamp = Long.parseLong(pushData.getString("timestamp"));
+            long storedTimestamp = pushConfig.getTimestamp();
 
-        if (timestamp <= storedTimestamp) {
-            // This push message was received already
-            return;
-        } else {
-            pushConfig.setTimestamp(timestamp);
-        }
+            if (timestamp <= storedTimestamp) {
+                // This push message was received already
+                return;
+            } else {
+                pushConfig.setTimestamp(timestamp);
+            }
+        } catch (NumberFormatException ignore) {}
+
         PushManager manager = pushConfig.getPushManager(type);
         if (manager != null) {
             manager.processPushMessage(pushData);
