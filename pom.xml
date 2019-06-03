@@ -17,7 +17,7 @@
     <android.version>4.1.1.4</android.version>
     <android.platform>16</android.platform>
     <android.plugin.version>4.4.1</android.plugin.version>
-    <android.support.version>21.0.2</android.support.version>
+    <android.support.version>27.1.1</android.support.version>
     <android.services.version>8.3.0</android.services.version>
     <dagger.version>1.2.2</dagger.version>
   </properties>
@@ -140,4 +140,12 @@
     </plugins>
 
   </build>
+
+  <repositories>
+    <repository>
+      <id>google</id>
+      <name>google</name>
+      <url>https://maven.google.com</url>
+    </repository>
+  </repositories>
 </project>
