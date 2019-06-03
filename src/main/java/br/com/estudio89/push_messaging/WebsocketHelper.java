@@ -1,15 +1,17 @@
 package br.com.estudio89.push_messaging;
 
-import android.os.Bundle;
-import br.com.estudio89.push_messaging.injection.PushInjection;
-import io.socket.client.IO;
-import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+
+import br.com.estudio89.push_messaging.injection.PushInjection;
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 /**
  * Created by luccascorrea on 7/7/15.
@@ -69,8 +71,8 @@ public class WebsocketHelper {
                     socket.on(identifier, new Emitter.Listener() {
                         public void call(Object... objects) {
                             JSONObject pushData = (JSONObject) objects[0];
-                            Bundle bundle = jsonObjectToBundle(pushData);
-                            PushCentral.processPushMessage(bundle);
+                            Map<String, String> map = jsonObjectToMap(pushData);
+                            PushCentral.processPushMessage(map);
                         }
                     });
                 }
@@ -183,17 +185,17 @@ public class WebsocketHelper {
      * @param pushData
      * @return
      */
-    private Bundle jsonObjectToBundle(JSONObject pushData) {
-        Bundle bundle = new Bundle();
+    private Map<String, String> jsonObjectToMap(JSONObject pushData) {
+        Map<String, String> map = new HashMap<>();
         Iterator<?> keys = pushData.keys();
         while (keys.hasNext()) {
             String key = (String) keys.next();
             try {
-                bundle.putString(key, pushData.getString(key));
+                map.put(key, pushData.getString(key));
             } catch (JSONException e) {
                 throw new RuntimeException(e);
             }
         }
-        return bundle;
+        return map;
     }
 }

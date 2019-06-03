@@ -1,28 +1,30 @@
 package br.com.estudio89.push_messaging;
 
-import android.app.IntentService;
-import android.content.Intent;
-import android.os.Bundle;
-import br.com.estudio89.push_messaging.extras.GcmBroadcastReceiver;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
+import java.util.Map;
 
 
 /**
  * Created by luccascorrea on 12/6/14.
  *
  */
-public class PushCentral extends IntentService {
+public class PushCentral extends FirebaseMessagingService {
 
-    public PushCentral() {
-        super("PushCentral");
+    @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        PushConfig pushConfig = PushConfig.getInstance();
+        pushConfig.performRegistrationIfNeeded();
     }
 
-    public static void processPushMessage(Bundle pushData) {
-        String type = pushData.getString("type");
+    public static void processPushMessage(Map<String, String> pushData) {
+        String type = pushData.get("type");
         PushConfig pushConfig = PushConfig.getInstance();
 
         try {
-            long timestamp = Long.parseLong(pushData.getString("timestamp"));
+            long timestamp = Long.parseLong(pushData.get("timestamp"));
             long storedTimestamp = pushConfig.getTimestamp();
 
             if (timestamp <= storedTimestamp) {
@@ -38,35 +40,13 @@ public class PushCentral extends IntentService {
             manager.processPushMessage(pushData);
         }
     }
+
     @Override
-    protected void onHandleIntent(Intent intent) {
-        Bundle extras = intent.getExtras();
-        GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-        // The getMessageType() intent parameter must be the intent you received
-        // in your BroadcastReceiver.
-        String messageType = gcm.getMessageType(intent);
-
-        if (!extras.isEmpty()) {  // has effect of unparcelling Bundle
-            /*
-             * Filter messages based on message type. Since it is likely that GCM
-             * will be extended in the future with new message types, just ignore
-             * any message types you're not interested in, or that you don't
-             * recognize.
-             */
-            if (GoogleCloudMessaging.
-                    MESSAGE_TYPE_SEND_ERROR.equals(messageType)) {
-
-            } else if (GoogleCloudMessaging.
-                    MESSAGE_TYPE_DELETED.equals(messageType)) {
-
-                // If it's a regular GCM message, do some work.
-            } else if (GoogleCloudMessaging.
-                    MESSAGE_TYPE_MESSAGE.equals(messageType)) {
-               processPushMessage(extras);
-            }
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+        Map<String, String> data = remoteMessage.getData();
+        if (!data.isEmpty()) {
+            processPushMessage(data);
         }
-        // Release the wake lock provided by the WakefulBroadcastReceiver.
-        GcmBroadcastReceiver.completeWakefulIntent(intent);
     }
-
 }

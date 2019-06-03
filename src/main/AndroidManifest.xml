@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.estudio89.syncing">
+    package="br.com.estudio89.push_messaging">
 
     <application
         android:allowBackup="true"
