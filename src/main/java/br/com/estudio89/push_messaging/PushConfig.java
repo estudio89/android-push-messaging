@@ -5,17 +5,17 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
-import br.com.estudio89.grabber.Grabber;
-import br.com.estudio89.grabber.annotation.GrabberFactory;
-import br.com.estudio89.grabber.annotation.InstantiationListener;
-import br.com.estudio89.push_messaging.injection.PushInjection;
-import br.com.estudio89.syncing.ServerComm;
-import br.com.estudio89.syncing.SyncConfig;
+
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,6 +24,13 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Set;
+
+import br.com.estudio89.grabber.Grabber;
+import br.com.estudio89.grabber.annotation.GrabberFactory;
+import br.com.estudio89.grabber.annotation.InstantiationListener;
+import br.com.estudio89.push_messaging.injection.PushInjection;
+import br.com.estudio89.syncing.ServerComm;
+import br.com.estudio89.syncing.SyncConfig;
 
 /**
  * Created by luccascorrea on 12/6/14.
@@ -131,23 +138,27 @@ public class PushConfig {
         Log.d(TAG, "performRegistrationIfNeeded token = " + token + " isEmpty = " + TextUtils.isEmpty(token));
         if (!TextUtils.isEmpty(token) && !runningRegistration) {
             Log.d(TAG, "INICIANDO REGISTRO DO DEVICE");
-            new RegisterDevice().execute();
+            FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                @Override
+                public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                    if (!task.isSuccessful()) {
+                        return;
+                    }
+                    InstanceIdResult result = task.getResult();
+                    if (result != null) {
+                        String registrationId = result.getToken();
+                        new RegisterDevice(registrationId).execute();
+                    }
+                }
+            });
         }
     }
 
 
     public boolean checkPlayServices(Activity activity) {
-        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(activity);
-        if (resultCode != ConnectionResult.SUCCESS) {
-            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
-                GooglePlayServicesUtil.getErrorDialog(resultCode, activity,
-                        9000).show();
-            } else {
-                activity.finish();
-            }
-            return false;
-        }
-        return true;
+        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = googleApiAvailability.isGooglePlayServicesAvailable(context);
+        return resultCode == ConnectionResult.SUCCESS;
     }
 
     /**
@@ -193,15 +204,17 @@ public class PushConfig {
     private static boolean runningRegistration = false;
     class RegisterDevice extends AsyncTask<Void,Void,Void> {
 
+        private String registrationId;
+
+        public RegisterDevice(String registrationId) {
+            this.registrationId = registrationId;
+        }
+
         @Override
         protected Void doInBackground(Void... voids) {
             try {
                 runningRegistration = true;
-                GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(context);
-                String registrationId = gcm.register(gcmSenderId);
-                sendRegistrationIdToBackend(registrationId);
-            } catch (IOException e) {
-
+                sendRegistrationIdToBackend(this.registrationId);
             } finally {
                 runningRegistration = false;
             }
