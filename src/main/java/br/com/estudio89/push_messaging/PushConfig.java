@@ -242,7 +242,6 @@ public class PushConfig {
                 ServerComm serverComm = ServerComm.getInstance();
                 serverComm.post(serverRegistrationUrl, parameters);
                 setRegistrationId(registrationId);
-                syncConfig.setDeviceId(registrationId);
 
                 // Starting websocket connection
                 if (!disableWebsocket) {
