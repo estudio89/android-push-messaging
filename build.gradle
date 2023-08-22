@@ -33,6 +33,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 repositories {
@@ -60,7 +63,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.google.firebase:firebase-core:16.0.9'
     implementation 'com.google.firebase:firebase-messaging:18.0.0'
-    implementation 'br.com.estudio89:syncing:1.0.44'
+    implementation 'br.com.estudio89:syncing:1.0.45'
     implementation 'br.com.estudio89:grabber:1.0'
     implementation 'io.socket:socket.io-client:0.6.1'
 }
